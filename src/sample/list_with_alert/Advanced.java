@@ -1,4 +1,4 @@
-package sample;
+package sample.list_with_alert;
 
 import javafx.application.Application;
 import javafx.collections.FXCollections;
@@ -11,6 +11,9 @@ import javafx.scene.control.ListView;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
+import sample.list_with_alert.Alert;
+import sample.list_with_alert.AlertChoice;
+
 /**
  * Created by Android on 16/07/2015.
  */
@@ -49,6 +52,8 @@ public class Advanced extends Application{
                     listView.setItems(items);
                     System.out.println(items);
                     textField1.setText("");
+                    // just for a test
+                    AlertChoice.display("Title", "Are you sure ??");
                 }
             }
         });
