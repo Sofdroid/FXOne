@@ -12,7 +12,7 @@ import javafx.stage.Stage;
  * Created by Android on 16/07/2015.
  */
 
-public class MainNewExpretion extends Application {
+public class MainUseLambdas extends Application {
     Button button ;
     @Override
     public void start(Stage primaryStage) throws Exception{
