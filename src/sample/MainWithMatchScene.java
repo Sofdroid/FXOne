@@ -79,7 +79,7 @@ public class MainWithMatchScene extends Application {
             });
         });
         layoutPane1 = new StackPane();
-        layoutPane1.getChildren().add(button1);
+        layoutPane1.getChildren().addAll(button1);
         scene1 = new Scene(layoutPane1 , 300 ,300);
         primaryStage.setScene(scene1);
         primaryStage.show();
