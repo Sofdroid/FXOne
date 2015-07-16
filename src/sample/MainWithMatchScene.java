@@ -41,7 +41,8 @@ public class MainWithMatchScene extends Application {
         //Adding the shadow when the mouse cursor is on
         button1.addEventHandler(MouseEvent.MOUSE_ENTERED,
                 new EventHandler<MouseEvent>() {
-                    @Override public void handle(MouseEvent e) {
+                    @Override
+                    public void handle(MouseEvent e) {
                         button1.setEffect(shadow);
                     }
                 });
