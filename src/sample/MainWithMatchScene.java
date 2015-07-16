@@ -8,6 +8,7 @@ import javafx.scene.control.Label;
 import javafx.scene.effect.DropShadow;
 import javafx.scene.image.Image;
 import javafx.scene.input.MouseEvent;
+import javafx.scene.input.SwipeEvent;
 import javafx.scene.layout.*;
 import javafx.stage.Stage;
 
@@ -35,7 +36,7 @@ public class MainWithMatchScene extends Application {
         button1 = new Button();
         imageOk = new Image(getClass().getResourceAsStream("images/balla.png"));
         button1.setText("Click me to move to scene 2");
-
+        button1.setStyle("-fx-font: 15 arial; -fx-base: #E91E63;");
         DropShadow shadow = new DropShadow();
         //Adding the shadow when the mouse cursor is on
         button1.addEventHandler(MouseEvent.MOUSE_ENTERED,
@@ -59,11 +60,19 @@ public class MainWithMatchScene extends Application {
             label1 = new Label("Welcome");
             button2 = new Button();
             button2.setText("Click me to move to scene 1");
+            button2.setStyle("-fx-font: 15 arial; -fx-base: #E91E63;");
             vbox = new VBox(50);
             vbox.getChildren().addAll(label1, button2  );
           //  layoutPane2 = new StackPane();
           //  layoutPane2.getChildren().addAll(label1, button2);
             scene2 = new Scene(vbox, 300, 200);
+
+            scene2.setOnSwipeRight(new EventHandler<SwipeEvent>() {
+                @Override
+                public void handle(SwipeEvent event) {
+                    stage.setScene(scene1);
+                }
+            });
             stage.setScene(scene2);
             button2.setOnAction(event -> {
                 stage.setScene(scene1);
